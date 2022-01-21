@@ -1,0 +1,40 @@
+{
+  "name": "cli-template",
+  "version": "1.0.0",
+  "description": "脚手架模板",
+  "main": "index.js",
+  "bin": {
+    "cli-template": "./bin/index.js"
+  },
+  "scripts": {
+    "test": "tsc --target ES2019 --watch",
+    "build:lib": "tsc --target ES2019",
+    "build": "npm run build:lib && npm run copy",
+    "build:watch": "tsc --target ES2019 --watch",
+    "copy": "rm -rf lib/templates && copyfiles -u 1 ./src/templates/**/* ./lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aeccing/cli-template.git"
+  },
+  "keywords": [
+    "cli",
+    "template",
+    "cli-template"
+  ],
+  "author": "raow",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aeccing/cli-template/issues"
+  },
+  "homepage": "https://github.com/Aeccing/cli-template#readme",
+  "dependencies": {
+    "inquirer": "^8.2.0",
+    "semver": "^7.3.5",
+    "update-notifier": "^5.1.0",
+    "yargs-parser": "^21.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.10"
+  }
+}
