@@ -11,7 +11,8 @@
     "build:lib": "tsc --target ES2019",
     "build": "npm run build:lib && npm run copy",
     "build:watch": "tsc --target ES2019 --watch",
-    "copy": "rm -rf lib/templates && copyfiles -u 1 ./src/templates/**/* ./lib"
+    "copy": "rm -rf lib/templates && copyfiles -u 1 ./src/templates/**/* ./lib",
+    "pub": "sh release.sh"
   },
   "repository": {
     "type": "git",
